@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean name="dumplings" class="com.pojo.Dumplings">
+        <property name="pie" value="芹菜猪肉馅水饺"/>
+        <property name="size" value="超大份"/>
+    </bean>
+    <bean name="juice" class="com.pojo.Juice">
+        <property name="name" value="苹果汁"/>
+    </bean>
+    
+    <bean name="hotel" class="com.pojo.Hotel">
+        <property name="dumplings" ref="dumplings"/>
+        <property name="juice" ref="juice"/>
+    </bean>
+    
+    
+</beans>
